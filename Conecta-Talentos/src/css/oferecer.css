@@ -1,0 +1,209 @@
+:root{
+  --cor-primaria:#2563EB;
+  --cinza-claro:#F3F6F9;
+  --cinza-borda:#D1D5DB;
+  --cinza-texto:#6B7280;
+  --texto:#111827;
+}
+
+
+/* O oferecer.jsx usa classes “cadastro-servico-*” e “input/textarea/btn”.
+   Este CSS reaproveita esses nomes para o layout ficar correto. */
+
+.cadastro-servico-container{
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cadastro-servico-header{ margin-bottom: 18px; }
+
+.cadastro-servico-icones{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:10px;
+}
+
+.cadastro-servico-icone{
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(37,99,235,0.08);
+  color: var(--cor-primaria);
+  font-size:20px;
+}
+
+.cadastro-servico-header h1{
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--texto);
+  margin: 0;
+}
+
+.cadastro-servico-header p{
+  color: var(--cinza-texto);
+  margin-top: 6px;
+  font-size: 1rem;
+}
+
+.cadastro-servico-form{
+  display:flex;
+  flex-direction:column;
+  gap: 18px;
+}
+
+.cadastro-servico-page{
+  width:100%;
+  padding: 28px 16px;
+  background: var(--cinza-claro);
+  min-height: calc(100vh - 64px);
+}
+
+.cadastro-servico-card{
+  background:#fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(17,24,39,0.06);
+  padding: 22px;
+  margin-bottom: 18px;
+}
+
+.cadastro-servico-card-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin: 0 0 14px 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--cor-primaria);
+}
+
+.cadastro-servico-card-title-icone{
+  width:34px;
+  height:34px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(37,99,235,0.08);
+  color: var(--cor-primaria);
+}
+
+.cadastro-servico-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.cadastro-servico-grid-2{
+  grid-template-columns: 1fr;
+}
+
+.field label{
+  display:block;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--texto);
+  font-size: 0.95rem;
+}
+
+.required{
+  color:#EF4444;
+  font-weight: 800;
+}
+
+.input{
+  width:100%;
+  border: 1px solid var(--cinza-borda);
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  outline:none;
+  background:#fff;
+}
+
+.textarea{
+  width:100%;
+  border: 1px solid var(--cinza-borda);
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  outline:none;
+  background:#fff;
+  resize: vertical;
+}
+
+.input:focus,
+.textarea:focus{
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+.checkbox-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight: 600;
+  color: var(--texto);
+  cursor:pointer;
+}
+
+.checkbox-row input[type="checkbox"]{
+  width:18px;
+  height:18px;
+  accent-color: var(--cor-primaria);
+  cursor:pointer;
+}
+
+.cadastro-servico-footer{
+  display:flex;
+  gap:12px;
+}
+
+.btn{
+  width:100%;
+  height: 52px;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor:pointer;
+  border: 1px solid transparent;
+}
+
+.btn-cancel{
+  background:#fff;
+  border-color: var(--cinza-borda);
+  color: var(--texto);
+}
+
+.btn-primary{
+  background: var(--cor-primaria);
+  color:#fff;
+  border-color: var(--cor-primaria);
+}
+
+.btn-primary:hover{
+  filter: brightness(0.94);
+}
+
+@media (min-width: 900px){
+  .cadastro-servico-grid-2{ grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px){
+  .cadastro-servico-page{ padding: 20px 12px; }
+  .cadastro-servico-card{ padding: 16px; }
+  .cadastro-servico-footer{ flex-direction: column; }
+  .btn{ height: 52px; }
+  .cadastro-servico-header h1{ font-size: 1.6rem; }
+}
+
+@media (max-width: 380px){
+  .cadastro-servico-header h1{ font-size: 1.35rem; }
+  .cadastro-servico-card{ padding: 14px; border-radius: 14px; }
+  .cadastro-servico-card-title{ font-size: 1rem; }
+}
+
+

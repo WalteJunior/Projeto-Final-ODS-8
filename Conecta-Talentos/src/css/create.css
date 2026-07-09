@@ -1,0 +1,117 @@
+.container-pai{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 16px;
+}
+
+/* Nome da Empresa */
+.empresa{
+    width: 18%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.empresa p{
+    font-size: 25px;
+    font-weight: bold;
+    border: solid 1px #1E3FC2;
+    padding: 5px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #1E3FC2, #2B4FD8);
+    color: white;
+}
+
+/* Seletor de Tipo */
+.seletor-tipo {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.opcao {
+    flex: 1;
+    border: 1px solid #D1D5DB;
+    border-radius: 12px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.opcao:hover {
+    border-color: #9CA3AF;
+}
+
+.opcao.ativa {
+    border-color: #2B4FD8;
+    border-width: 2px;
+    background-color: #EEF2FF;
+}
+
+.icone-opcao {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #6B7280;
+}
+
+.opcao.ativa .icone-opcao {
+    color: #2B4FD8;
+}
+
+.opcao strong {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+    color: #111827;
+}
+
+.opcao p {
+    font-size: 0.8rem;
+    color: #6B7280;
+}
+
+/* Formulário de Registro */
+.registro{
+    margin-top: 20px;
+    width: 40%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+.form-title{
+    text-align: center;
+}
+
+.create-form{
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Responsivo ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .empresa{ width: 30%; }
+    .registro{ width: 60%; }
+}
+
+/* Celulares grandes / tablets pequenos */
+@media (max-width: 768px) {
+    .empresa{ width: 50%; }
+    .registro{ width: 85%; padding: 16px; }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .container-pai{ padding: 16px 12px; }
+    .empresa{ width: 80%; }
+    .empresa p{ font-size: 18px; }
+    .registro{ width: 100%; padding: 14px; box-shadow: none; border: 1px solid #E5E7EB; }
+    .seletor-tipo{ flex-direction: column; gap: 0.75rem; }
+    .opcao{ padding: 0.85rem; }
+}

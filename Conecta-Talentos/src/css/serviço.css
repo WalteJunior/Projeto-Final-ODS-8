@@ -1,0 +1,219 @@
+/* Estilos exclusivos do Serviço (pessoa) */
+
+.pesquisa {
+    background-color: white;
+    padding: 15px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+}
+
+.busca {
+    width: 60vw;
+    border: solid 1px;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+select {
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+
+select:focus {
+    outline: none;
+    border: 1px solid #2B4FD8;
+    border-radius: 8px;
+}
+
+.vaga-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.25rem;
+    align-items: stretch;
+}
+
+.vaga-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-top: 1rem;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.vaga-card-topo {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.vaga-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #2B4FD8;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.vaga-info h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+.vaga-empresa {
+    font-size: 0.875rem;
+    color: #6B7280;
+    margin-bottom: 8px;
+}
+
+.vaga-tags {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #EEF2FF;
+    color: #2B4FD8;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 99px;
+}
+
+.tag-descricao {
+    font-size: 0.8rem;
+    color: #6B7280;
+}
+
+.vaga-card-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #F3F4F6;
+}
+
+.vaga-salario {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.vaga-acoes {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-detalhes {
+    padding: 8px 16px;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    background: white;
+    color: #374151;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.btn-detalhes:hover {
+    background: #F9FAFB;
+}
+
+.btn-candidatar {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #2B4FD8;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-candidatar:hover {
+    background: #2342C0;
+}
+
+/* ===== Responsivo ===== */
+
+/* Tablets */
+@media (max-width: 900px) {
+    .vaga-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+}
+
+/* Celulares */
+@media (max-width: 700px) {
+    .pesquisa {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    /* o TextField do MUI usa sx com width em vw; força ocupar a largura toda no mobile */
+    .pesquisa .MuiFormControl-root,
+    .pesquisa .MuiOutlinedInput-root {
+        width: 100% !important;
+    }
+
+    .pesquisa select {
+        width: 100%;
+    }
+
+    .vaga-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vaga-card {
+        padding: 1rem;
+    }
+
+    .vaga-card-topo {
+        flex-wrap: wrap;
+    }
+
+    .vaga-card-rodape {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .vaga-acoes {
+        width: 100%;
+    }
+
+    .btn-detalhes,
+    .btn-candidatar {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+@media (max-width: 420px) {
+    .vaga-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .vaga-info h3 {
+        font-size: 0.95rem;
+    }
+}
+

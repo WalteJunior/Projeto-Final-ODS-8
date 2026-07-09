@@ -1,0 +1,173 @@
+.container{
+    display: flex;
+    min-height: 100vh;
+}
+.login_left{
+    width: 45%;
+    background: url(src/assets/img/imagem_login.png) no-repeat;
+    background-size: 100% 105%;
+    padding: 2rem;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    flex-direction: column;
+}
+.conteudo{
+    text-align: center;
+}
+.painel_direito {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 450px;
+}
+
+.login-form h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.subtitulo {
+    color: #6B7280;
+    margin-bottom: 2rem;
+}
+
+/* Campos */
+.campo {
+    margin-bottom: 1.25rem;
+}
+
+.campo label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.campo-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.campo-topo label {
+    margin-bottom: 0;
+}
+
+.campo-topo a {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #2B4FD8;
+    text-decoration: none;
+}
+
+.input-icone {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icone input {
+    width: 100%;
+    padding: 14px 44px;
+    border: 1px solid #D1D5DB;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    outline: none;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.input-icone input:focus {
+    border-color: #2B4FD8;
+    box-shadow: 0 0 0 3px rgba(43, 79, 216, 0.1);
+}
+
+.input-icone .icone {
+    position: absolute;
+    left: 14px;
+    color: #9CA3AF;
+    font-size: 1.1rem;
+}
+
+.input-icone .icone-direita {
+    position: absolute;
+    right: 14px;
+    color: #9CA3AF;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+/* Botão Entrar */
+.btn-entrar {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #1E3FC2, #2B4FD8);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.btn-entrar:hover {
+    opacity: 0.9;
+}
+
+/* Rodapé */
+.rodape-form {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6B7280;
+}
+
+.rodape-form a {
+    color: #2B4FD8;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ===== Responsivo ===== */
+
+/* Tablets: reduz o painel de imagem mas mantém lado a lado */
+@media (max-width: 1024px) {
+    .login_left{ width: 38%; }
+    .painel_direito{ width: 62%; padding: 1.5rem; }
+}
+
+/* Celulares / telas estreitas: empilha os dois painéis */
+@media (max-width: 768px) {
+    .container{ flex-direction: column; min-height: auto; }
+    .login_left{
+        width: 100%;
+        min-height: 220px;
+        background-size: cover;
+        background-position: center;
+        padding: 1.5rem;
+    }
+    .painel_direito{
+        width: 100%;
+        padding: 1.5rem 1.25rem 2.5rem;
+    }
+    .login-form{ max-width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .login_left{ min-height: 160px; padding: 1.25rem; }
+    .painel_direito{ padding: 1.25rem 1rem 2rem; }
+    .login-form h2{ font-size: 1.4rem; }
+    .input-icone input{ padding: 12px 40px; }
+    .btn-entrar{ padding: 14px; }
+}
